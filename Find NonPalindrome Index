@@ -1,6 +1,10 @@
 Q: Find the index of the character in almost Palindrome String which causes the string to be Non-Palindrome:
 
 Ans:  Detailed Question: https://www.hackerrank.com/challenges/palindrome-index
+Also please NOTICE that this is a recursive approach and might not work, if the input string is greater than 10^5 size,
+since the stack frames would exhaust the memory of stack allocated to run this program.
+Source: http://codereview.stackexchange.com/questions/63349/index-of-letter-removed-to-make-string-palindrome
+But otherwise, this approach will work.
 
 package divideandconquer;
 
