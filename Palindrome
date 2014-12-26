@@ -29,3 +29,6 @@ public class Palindromes
             System.out.println(x + " is not a palindrome");
     }
 }
+/*
+Another method is to reverse the string and check this reverse with the original string. If both equal then Palindrome
+*/
