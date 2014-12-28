@@ -56,14 +56,16 @@ public static boolean KPalinString(String s, int k){
 	while(s.charAt(0)==s.charAt(s.length()-1)){
 		s=s.substring(1,s.length()-1);
 		
-		if(s.length()==0 || s.length() == 1)// If the substring is decremented till the point where the length is 0 or 1, then return true
+		if(s.length()==0 || s.length() == 1)// If the substring is decremented till the point where the length
+		//is 0 or 1, then return true
 			return true;
 	}
 	 
 	if(k==0)    // If there is a mismatch, then check if the k is already 0
 		return false;
 	
-	return KPalinString(s.substring(0,s.length()-1), k-1) || KPalinString(s.substring(1,s.length()), k-1); // decrement the k and check for the remaining string leaving behind the character which led to the mis-matach
+	return KPalinString(s.substring(0,s.length()-1), k-1) || KPalinString(s.substring(1,s.length()), k-1); 
+	// decrement the k and check for the remaining string leaving behind the character which led to the mis-matach
 	
 }
 
@@ -81,7 +83,8 @@ public static int dynamicProgrammingSolution (String s, String rev, int k){
 			if(s.charAt(i-1)==rev.charAt(j-1))
 				dp[i][j] = dp[i-1][j-1];
 			
-			dp[i][j] = 	Math.min(Math.min(dp[i][j], 1 + dp[i][j-1]),1 + dp[i-1][j]); // delete character j
+			dp[i][j] = 	Math.min(Math.min(dp[i][j], 1 + dp[i][j-1]),1 + dp[i-1][j]); 
+			// delete character j
 			
 		}
 	}
