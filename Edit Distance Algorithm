@@ -7,7 +7,7 @@ the DYNAMIC APPROACH is to be followed, since for larger strings (10^5 length) t
 due to overflow of stack frames, due to excessive RECURSIVE CALLS (if RECURSIVE approach is used instead of DYNAMIC PROGRAMMING)
 approach.
 
-// Dynmaic Programming approach to solve Edit Distance Algorithm
+/************************************* DYNAMIC PROGRAMMING APPROACH SOLUTION **************************************/
 package dynamicProgramming;
 
 import java.util.Scanner;
@@ -80,7 +80,7 @@ private static int check(char c1, char c2) {
 }
 }
 
-/************************************* RECURSIVE APPROACH SOLUTON **************************************/
+/************************************* RECURSIVE APPROACH SOLUTION **************************************/
 
 // Below mentioned is a recursive program to solve the EDIT DISTANCE ALGORITHM.
 
