@@ -1,7 +1,7 @@
-Source: http://www.geeksforgeeks.org/dynamic-programming-set-5-edit-distance/  -> Edit Distance Implementation 
+Source: http://www.geeksforgeeks.org/dynamic-programming-set-5-edit-distance/  -> EDIT DISTANCE IMPLEMENTATION
 (NOTE: I have also implmented Edit Distance algorithm in this repository)
-        http://www.careercup.com/question?id=6287528252407808 -> Dynamic Programming Approach Solution
- ****   http://stackoverflow.com/questions/20892506/determine-if-a-given-string-is-a-k-palindrome ->Recursive Approach Solution
+        http://www.careercup.com/question?id=6287528252407808 -> DYNAMIC PROGRAMMING APPROACH SOLUTION
+ ****   http://stackoverflow.com/questions/20892506/determine-if-a-given-string-is-a-k-palindrome ->RECURSIVE APPROACH SOLUTION
  
  PLEASE CHECK ALL THE ABOVE THREE SOURCES
  
