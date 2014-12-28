@@ -1,6 +1,12 @@
 Youtube Video: https://www.youtube.com/watch?v=CB425OsE4Fo
 GeeksforGeeks Source: http://www.geeksforgeeks.org/dynamic-programming-set-5-edit-distance/
 
+Here, I have given, both th RECURSIVE and DYNAMIC PROBLEM solution to the EDIT DISTANCE Algorithm.
+NOTE that, the recursive apprach would work for strings smaller than 10^5 length. For strings with larger length,
+the DYNAMIC APPROACH is to be followed, since for larger strings (10^5 length) the program might throw 'STACK OVERFLOW' error,
+due to overflow of stack frames, due to excessive RECURSIVE CALLS (if RECURSIVE approach is used instead of DYNAMIC PROGRAMMING)
+approach.
+
 // Recursive Program in JAVA for edit distance algorithm
 package dynamicProgramming;
 
