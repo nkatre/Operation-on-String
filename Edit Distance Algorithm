@@ -7,12 +7,12 @@ the DYNAMIC APPROACH is to be followed, since for larger strings (10^5 length) t
 due to overflow of stack frames, due to excessive RECURSIVE CALLS (if RECURSIVE approach is used instead of DYNAMIC PROGRAMMING)
 approach.
 
-/************************************* DYNAMIC PROGRAMMING APPROACH SOLUTION **************************************/
+/************************************* DYNAMIC PROGRAMMING (ITERATIVE) APPROACH SOLUTION **************************************/
 package dynamicProgramming;
 
 import java.util.Scanner;
 
-public class DP_editDistance {
+public class UsingIterativeEditDistance {
 public static void main(String[] args) {
 	Scanner in = new Scanner(System.in);
 	try{
@@ -78,19 +78,21 @@ private static int check(char c1, char c2) {
 		return 0;
 	return 1;
 }
+
 }
+/*
+Analysis:
+	 Time Complexity = O(n^2)
+	 Space Complexity = O(n^2)*/
 
 /************************************* RECURSIVE APPROACH SOLUTION **************************************/
-
-// Below mentioned is a recursive program to solve the EDIT DISTANCE ALGORITHM.
-
 package dynamicProgramming;
 
 // Recursive Program to convert one string into another. Also called as edit distance algorithm
 
 import java.util.Scanner;
 
-public class editDistance {
+public class UsingRecursiveEditDistance {
 public static void main(String[] args) {
 	Scanner in = new Scanner(System.in);
 	try{
@@ -133,4 +135,36 @@ private static int check(char c1, char c2) {
 	return 1;
 }
 }
+/*
+Analysis:
+	I. Time Complexity:  O(3^(m+n-1)). This is an EXPONENTIAL time algorithm
+	
+	The recursion formula is,
 
+	T(m,n) = T(m-1,n-1) + T(m-1,n) + T(m,n-1) + 1
+	T(0,n) = n
+	T(m,0) = m
+	is right.
+
+	You can see, that every T(m,n) splits of into three paths. Due to every node runs in O(1) we only have to 
+	count the nodes.
+
+	A shortest path has the length min(m,n), so the (recursion)tree has at least 3min(m,n) nodes. But there are 
+	some paths that are longer. 
+	
+	You get the longest path by alternately reduce the first and the second string.
+	This path will have the length m+n-1, so the whole tree has at most 3m+n-1 nodes.
+
+	Let m = min(m,n). The tree contains also at least
+
+	enter image description here
+
+	different paths, one for each possible order of reducing n.
+
+	So Ω(2^(max(m,n))) and Ω(3^(min(m,n))) are lower bounds and O(3^(m+n-1)) is an upper bound.
+	
+	*
+	*I. Space Complexity: The space complexity of the algorithm is also EXPONENTIAL (since multiple
+	* recursive calls utilizes many stack frames. If the length of the strings is 10^5, the program might crash)
+	*
+	*/
